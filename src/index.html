@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Simpsons characters cards</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/png" href="img/ic_donut.png">
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/"
+        }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="main-header top-0 left-0 bg-Lavender w-full h-auto bg-blue-50 shadow-md z-10 text-slate-200">
+        <nav class="main-nav flex flex-col md:flex-row md:justify-evenly items-center justify-evenly gap-4 p-4">
+            <a href="#home"><img class="logo-link mx-auto mb-4 w-28 h-28" src="img/ic_donut.png"
+                    alt="logo perfumeria elixir"></a>
+            <button class="nav-btn" data-target="home">Home</button>
+            <button class="nav-btn" data-target="characters-section">Characters</button>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home" class="section hero border-l-orange-300 flex flex-col md:flex-row h-screen text-center justify-center md:justify-evenly items-center
+                bg-[url('./img/bg_simpsons.jpg')] bg-cover bg-center bg-no-repeat">
+
+            <div>
+                <h1 class="text-6xl md:text-8xl font-medium text-outline-black mb-4">The Simpsons</h1>
+                <h2 class="text-4xl md:text-5xl font-medium mb-4">Character Cards</h2>
+                <p class="text-xl md:text-3xl">Cards of the characters from The Simpsons</p>
+            </div>
+            <div id="three-container" class="w-full md:w-1/2 h-[400px] md:h-[500px] bg-transparent">
+                <canvas id="three-canvas" class="w-full h-full"></canvas>
+            </div>
+
+        </section>
+
+        <section id="characters-section" class="section characters-section p-4">
+            <h2 class="section-title text-3xl md:text-4xl font-semibold text-center my-8">From TV to Cards</h2>
+
+            <div class="flex flex-row justify-center items-center m-4">
+                <button class="previous-page-api p-2 m-2 bg-Amarillo rounded-lg">Previous</button>
+                <button class="next-page-api p-2 m-2 bg-Lavender rounded-lg">Next</button>
+            </div>
+
+            <div id="characters-container"
+                class="characters-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Cards will appear here -->
+            </div>
+
+            <div class="flex flex-row justify-center items-center m-4">
+                <button class="previous-page-api p-2 m-2 bg-Amarillo rounded-lg">Previous</button>
+                <button class="next-page-api p-2 m-2 bg-Lavender rounded-lg">Next</button>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <script type="module" src="./js/3d_homer_main.js"></script>
+    <script src="./js/api_consumer.js"></script>
+    <script src="./js/scroll_buttons.js"></script>
+
+</body>
+
+</html>

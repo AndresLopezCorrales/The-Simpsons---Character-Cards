@@ -34,7 +34,7 @@ controls.enableDamping = true;
 controls.enableZoom = false;
 controls.enablePan = false;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 1;
+controls.autoRotateSpeed = 10;
 
 // Load model
 const loader = new GLTFLoader();

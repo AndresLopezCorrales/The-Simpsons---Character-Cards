@@ -58,13 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             nextBtns.forEach(btn => {
                 btn.disabled = false;
-                btn.classList.remove("opacity-50", "cursor-not-allowed");
+                btn.classList.remove("opacity-50", "cursor-not-allowed", "pointer-events-none");
             });
 
             if (data.results.length === 0) {
                 nextBtns.forEach(btn => {
                     btn.disabled = true;
-                    btn.classList.add("opacity-50", "cursor-not-allowed");
+
+                    btn.classList.add("opacity-50", "cursor-not-allowed", "pointer-events-none");
                 });
                 cardsContainer.innerHTML = `<p>No more characters.</p>`;
                 return;

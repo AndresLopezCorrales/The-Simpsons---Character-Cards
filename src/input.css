@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Simpson';
+    src: url('./fonts/Simpsonfont\ DEMO.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Simpson', Arial, sans-serif;
+}
+
+.text-outline-black {
+    -webkit-text-stroke: 3px black;
+    color: #FFD90F;
+}
+
+@layer components {
+    .nav-btn {
+        @apply px-6 py-2 bg-transparent border-2 border-blue-400 text-blue-600 font-medium rounded hover:bg-yellow-400 hover:text-amber-700 hover:border-amber-800 transition-colors duration-300;
+    }
+}

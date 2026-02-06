@@ -6,6 +6,10 @@ Page dedicated to consume the Simpsons API to create cards of the characters tha
 
 For style purposes, ThreeJS was implemented to add a 3D model of Homer Simpson into the page.
 
+## WEB PAGE DEPLOYED
+
+- https://thesimpsonscharactercards.netlify.app/
+
 ## Features
 
 - Character cards generated from the Simpsons API

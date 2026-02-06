@@ -87,6 +87,11 @@ export class SimpsonsPaginationManager {
     }
 
     async fetchPage(page) {
+
+        if (!navigator.onLine) {
+            throw new Error('OFFLINE');
+        }
+
         if (!this.canMakeRequest()) {
             throw new Error('Circuit breaker open');
         }
